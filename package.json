@@ -1,0 +1,19 @@
+{
+  "name": "YAEventEmitter",
+  "version": "0.0.1",
+  "description": "Unobtrusive EventEmitter built to be inherited.",
+  "keywords": [
+    "events",
+    "event",
+    "eventemitter",
+    "event-emitter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unkelpehr/YAEventEmitter"
+  },
+  "author": "Pehr Boman <https://github.com/unkelpehr>",
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "MIT"
+}
