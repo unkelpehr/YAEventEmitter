@@ -146,14 +146,9 @@ class EventEmitter {
 			return self;
 		}
 
-		// 
-		listeners = arrayClone(listeners);
-
 		for (; i < listeners.length; ++i) {
 			if (listeners[i] === listener) {
-				console.log('delete', i, listeners);
 				spliceOne(listeners, i--);
-				console.log('delete', i, listeners);
 
 				if (!listeners.length) {
 					delete self.EventEmitter.listeners[eventName];
@@ -184,8 +179,8 @@ class EventEmitter {
 				args[i] = arguments[i];
 			}
 
-			exec(listener, self, args);
 			self.off(eventName, _);
+			exec(listener, self, args);
 		});
 
 		return self;
@@ -212,9 +207,8 @@ class EventEmitter {
 			if (typeof listeners === 'function') {
 				exec(listeners, this, args);
 			} else {
-				// lyssnare tillagda med 'once' splice'ar
-				// listeners-arrayen efter varje exec här nedan.
-				// Hur fixa?
+				listeners = arrayClone(listeners);
+
 				for (i = 0; i < listeners.length; ++i) {
 					exec(listeners[i], this, args);
 				}
