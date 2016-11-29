@@ -1,6 +1,6 @@
 {
   "name": "YAEventEmitter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Unobtrusive EventEmitter built to be inherited.",
   "keywords": [
     "events",
