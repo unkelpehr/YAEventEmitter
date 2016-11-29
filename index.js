@@ -15,11 +15,15 @@ function exec (func, context, args) {
 	}
 }
 
-function arrayClone(arr, i) {
-  var copy = new Array(i);
-  while (i--)
-    copy[i] = arr[i];
-  return copy;
+function arrayClone (arr) {
+	var i = arr.length,
+		copy = new Array(i);
+
+	while (i--) {
+		copy[i] = arr[i];
+	}
+
+	return copy;
 }
 
 
