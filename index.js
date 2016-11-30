@@ -26,17 +26,15 @@ function arrayClone (arr) {
 	return copy;
 }
 
-
-// About 1.5x faster than the two-arg version of Array#splice().
-function spliceOne (list, index) {
+function spliceOne (arr, index) {
 	var i1 = index,
 		i2 = i1 + 1;
 
-	for ( ; k < list.length; i += 1, k += 1) {
-		list[i] = list[k];
+	for (; i2 < arr.length; i1 += 1, i2 += 1) {
+		arr[i1] = arr[i2];
 	}
 
-	list.pop();
+	arr.pop();
 }
 
 /**
